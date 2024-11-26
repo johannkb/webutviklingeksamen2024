@@ -49,6 +49,10 @@ i{
     flex-direction: column;
 }
 
+.container-column p{
+    margin:0;
+}
+
 .searchbtn{
     padding: 0.5rem 1rem;
     margin:0 0.3rem;
@@ -429,4 +433,5 @@ nav ul li{
 #disclaimer{
     font-size: 14px;
     font-weight: 600;
+    margin-bottom: 1rem;
 }

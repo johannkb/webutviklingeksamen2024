@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
         <ul>
             <li><a href="index.html">Hjem</a></li>
             <li><a href="#product">Produkter</a></li>
-            <li><h1><a href="index.html" class="logo">Logo</a></h1></li>
+            <li><h2><a href="index.html" class="logo">Logo</a></h2></li>
             <li><a href="#category">Kategorier</a></li>
             <li><a href="#footer">Kontakt oss</a></li>
             <li><i class="fa-regular fa-user"></i></li>
@@ -29,7 +29,7 @@
         </ul>
     </nav>
     <main>
-        <h1 class="checkouttitle">kasse</h1>
+        <h2 class="checkouttitle">kasse</h2>
             <section>
                 <h2 class="checkouttitle">1. SHOPPINGBAGEN DIN</h2>
                     <article class="productitems">
@@ -52,21 +52,20 @@
                     </article>
             </section>
     </main>
-    <aside>
-        <h1 class="checkouttitle">2. DINE OPPLYSNINGER</h1>
+    <aside class="checkoutcontainer">
+        <h2 class="checkouttitle">2. DINE OPPLYSNINGER</h2>
         <form class="checkoutcontainer">
-            <legend>leveringsadresse</legend>
-            <label class="checkoutcontainer">
+            <p>leveringsadresse</p>
                 <input type="text" placeholder="Fornavn*" class="checksearchbar">
                 <input type="text" placeholder="Etternavn*" class="checksearchbar">
                 <input type="text" placeholder="Gateadresse*" class="checksearchbar">
                 <input type="number" placeholder="Postnummer*" class="checksearchbar">
                 <input type="text" placeholder="Poststed" class="checksearchbar">
-            </label>
-            <input type="submit" value="Lagre" class="checkbtn">
-            <a href="#">avbryt</a>
+            
         </form>
-        <h1 class="checkouttitle">3. LEVERING</h1>
+        <input type="submit" value="Lagre" class="checkbtn">
+            <a href="#">avbryt</a>
+        <h2 class="checkouttitle">3. LEVERING</h2>
         <form class="checkoutcontainer">
             <span>LEVERINGSVALG</span>
             <label class="checkradio">
@@ -82,7 +81,7 @@
                 Standard Hjemlevering
             </label>
         </form>
-        <h1 class="checkouttitle">4. BETALING</h1>
+        <h2 class="checkouttitle">4. BETALING</h2>
         <form class="checkoutcontainer">
             <span>BETAL MED KORT</span>
             Kortnummer
@@ -93,10 +92,14 @@
             <input type="text" placeholder="CVC/CVV" class="checksearchbar">
         </form>
         <form class="container-column">
-            <span> Å betale inkl. mva.</span>
-            <span>1 199kr</span>
+            <p> Å betale inkl. mva.</p>
+            <p>1 199kr</p>
             <input type="submit" value="Fullfør kjøp" class="checkbtn">
             <p id="disclaimer">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger</p>
+            <label class="container-row">
+                <input type="checkbox">
+                Ja, jeg godtar vilkårene.
+            </label>
             <label class="container-row">
                 <input type="checkbox">
                 Ja takk! Send nyhetsbrev til meg.
@@ -133,9 +136,9 @@
             <h2>sosiale medier</h2>
                 <ul>
                     <li><a href="instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></a></i></li>
-                    <li><a href="linkedin.com"><i class="fa-brands fa-linkedin"></a></i></li>
-                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest"></a></i></li>
+                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
         </section>
     </footer>
