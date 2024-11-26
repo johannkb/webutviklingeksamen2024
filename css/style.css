@@ -8,6 +8,11 @@ body{
     flex-direction: column;
 }
 
+i{
+    color: black;
+    font-size: 18px;
+}
+
 .searchbar{
     border: 1px solid black;
     padding: 0.5rem 2rem 0.5rem 1rem;
@@ -48,6 +53,8 @@ nav ul li{
     margin: 0;
     font-size: 40px;
     font-weight:bolder;
+    text-decoration: none;
+    color: black;
 }
 
 #mainbanner{
@@ -124,7 +131,7 @@ nav ul li{
     text-transform: capitalize;
 }
 
-.category article{
+#category article{
     display: flex;
     border: 1px solid black;
     height: 300px;
@@ -196,6 +203,7 @@ nav ul li{
     padding: 0 0 1rem 0 ;
     margin: 0;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
 .shortcut ul{
@@ -207,4 +215,20 @@ nav ul li{
 .shortcut ul li{
     padding: .3rem 0;
     font-size: 18px;
+}
+
+.social h2{
+    padding: 1rem 0 0 0 ;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.social ul li{
+    list-style: none;
+    padding: .5rem 0;
+}
+
+.social ul{
+    padding:0;
 }
