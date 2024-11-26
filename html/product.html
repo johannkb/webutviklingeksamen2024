@@ -19,102 +19,100 @@
     <nav>
         <ul>
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="product.html">Produkter</a></li>
-            <li><h1>Logo</h1></li>
-            <li><a href="#">Kategorier</a></li>
-            <li><a href="#">Kontakt oss</a></li>
+            <li><a href="#product">Produkter</a></li>
+            <li><h1><a href="index.html" class="logo">Logo</a></h1></li>
+            <li><a href="#category">Kategorier</a></li>
+            <li><a href="#footer">Kontakt oss</a></li>
             <li><i class="fa-regular fa-user"></i></li>
             <li><i class="fa-regular fa-heart"></i></li>
             <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
     <main>
-        <div>
-            <ol>
-                <li>Hjem</li>
+        <div id="breadcrumb">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
                 <li>></li>
-                <li>Kategori</li>
+                <li><a href="#producttext">Kategori</a></li>
                 <li>></li>
-                <li>Produktnavn</li>
-            </ol>
-            <img src="#">
-            <img src="#">
-            <img src="#">
-            <img src="#">
+                <li class="boldtext"><a href="product">Produktnavn</a></li>
+            </ul>
         </div>
+        <div id="productside">
+            <ul>
+                <li><img src="https://picsum.photos/1000/1000" alt="productphoto"></li>
+                <li><img class="photosize" src="https://picsum.photos/1000/1000" alt="productphoto"></li>
+                <li><img class="photosize" src="https://picsum.photos/1000/1000" alt="productphoto"></li>
+                <li><img class="photosize" src="https://picsum.photos/1000/1000" alt="productphoto"></li>
+            </ul>
+        </div>
+        <section id="producttext">
+            <h2>produktnavn</h2>
+            <ul>
+                <li class="brandname">merkenavn</li>
+                <li>5 195 kr inkl. mva</li>
+                <li>Farge: <span class="boldtext">beige</span></li>
+            </ul>
+        </section>
     </main>
     <aside>
-        <section>
-            <h2>Produktnavn</h2>
-                <ul>
-                    <li>merkenavn</li>
-                    <li>5 195 kr inkl. mva</li>
-                    <li>farge: beige</li>
-                </ul>
-        </section>
-        <section>
+        <section id="product" class="productaside">
             <h2>lignende produkter</h2>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
                 <article>
-                    <img src="#">
-                    <h3>product name</h3>
-                    <p>kr 1999</p>
+                    <img src="https://picsum.photos/1000/1000" alt="productphoto">
+                    <h3>product name <span class="price">kr 1999</span></h3>
                 </article>
         </section>
     </aside>
     <footer>
-        <section>
-            <h2>Logo</h2>
-            <p>placeholder</p>
+        <section class="footersec" id="footer">
+            <h2><a href="index.html" class="logo">Logo</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </section>
-        <section>
+        <section class="footericons">
             <h2>Kontakt</h2>
             <ul>
-                <li><i class="fa-solid fa-location-dot"></i><p>Adresse:</p><p>B R A Veien 4, 1757 Halden</p></li>
-                <li><i class="fa-solid fa-phone"></i><p>Telefon:</p><p>69 60 80 00</p></li>
-                <li><i class="fa-solid fa-envelope"></i><p>E-post:</p><p>halden@hiof.no</p></li>
-                <li><i class="fa-solid fa-clock"></i><p>Åpningstider:</p><p>Stenger 15:00</p></li>
+                <li><i class="fa-solid fa-location-dot"></i><p class="boldtext">Adresse:</p><p>B R A Veien 4, 1757 Halden</p></li>
+                <li><i class="fa-solid fa-phone"></i><p class="boldtext">Telefon:</p><p>69 60 80 00</p></li>
+                <li><i class="fa-solid fa-envelope"></i><p class="boldtext">E-post:</p><p>halden@hiof.no</p></li>
+                <li><i class="fa-solid fa-clock"></i><p class="boldtext">Åpningstider:</p><p>Stenger 15:00</p></li>
             </ul>
         </section>
-        <section>
+        <section class="shortcut">
             <h2>Snarveier</h2>
             <ul>
-                <li><a>Produkter</a></li>
-                <li><a>Kategorier</a></li>
-                <li><a>Kontakt oss</a></li>
+                <li><a href="#product">Produkter</a></li>
+                <li><a href="#category">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
             </ul>
         </section>
-        <section>
+        <section class="social">
             <h2>sosiale medier</h2>
                 <ul>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><i class="fa-brands fa-pinterest"></i></li>
+                    <li><a href="instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></a></i></li>
+                    <li><a href="linkedin.com"><i class="fa-brands fa-linkedin"></a></i></li>
+                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest"></a></i></li>
                 </ul>
         </section>
     </footer>
