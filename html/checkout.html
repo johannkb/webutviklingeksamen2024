@@ -29,22 +29,22 @@
         </ul>
     </nav>
     <main>
-        <h1>kasse</h1>
+        <h1 class="checkouttitle">kasse</h1>
             <section>
-                <h2>1. SHOPPINGBAGEN DIN</h2>
-                    <article>
+                <h2 class="checkouttitle">1. SHOPPINGBAGEN DIN</h2>
+                    <article class="productitems">
                         <img src="https://picsum.photos/1000/1000" alt="productphoto">
                         <h3>product name</h3>
                         <p>kr 1999</p>
                         <p>farge: beige</p>
                     </article>
-                    <article>
+                    <article class="productitems">
                         <img src="https://picsum.photos/1000/1000" alt="productphoto">
                         <h3>product name</h3>
                         <p>kr 1999</p>
                         <p>farge: beige</p>
                     </article>
-                    <article>
+                    <article class="productitems">
                         <img src="https://picsum.photos/1000/1000" alt="productphoto">
                         <h3>product name</h3>
                         <p>kr 1999</p>
@@ -53,61 +53,55 @@
             </section>
     </main>
     <aside>
-        <h1>2. DINE OPPLYSNINGER</h1>
-        <form>
-            <span>leveringsadresse</span>
-            <label>
-                <input type="text" placeholder="Fornavn*" class="searchbar">
-                <input type="text" placeholder="Etternavn*" class="searchbar">
-                <input type="text" placeholder="Gateadresse*" class="searchbar">
-                <input type="number" placeholder="Postnummer*" class="searchbar">
-                <input type="text" placeholder="Poststed" class="searchbar">
-                <input type="submit" value="Lagre" class="checkbtn">
+        <h1 class="checkouttitle">2. DINE OPPLYSNINGER</h1>
+        <form class="checkoutcontainer">
+            <legend>leveringsadresse</legend>
+            <label class="checkoutcontainer">
+                <input type="text" placeholder="Fornavn*" class="checksearchbar">
+                <input type="text" placeholder="Etternavn*" class="checksearchbar">
+                <input type="text" placeholder="Gateadresse*" class="checksearchbar">
+                <input type="number" placeholder="Postnummer*" class="checksearchbar">
+                <input type="text" placeholder="Poststed" class="checksearchbar">
             </label>
+            <input type="submit" value="Lagre" class="checkbtn">
             <a href="#">avbryt</a>
         </form>
-        <h1>3. LEVERING</h1>
-        <form>
-            <legend>LEVERINGSVALG</legend>
-            <label>
+        <h1 class="checkouttitle">3. LEVERING</h1>
+        <form class="checkoutcontainer">
+            <span>LEVERINGSVALG</span>
+            <label class="checkradio">
                 <input type="radio" name="levering">
                 Express Hjemlevering
             </label>
-            <label>
+            <label class="checkradio">
                 <input type="radio" name="levering">
                 Express Pakke til Utleveringssted
             </label>
-            <label>
+            <label class="checkradio">
                 <input type="radio" name="levering">
                 Standard Hjemlevering
             </label>
         </form>
-        <h1>4. BETALING</h1>
-        <form>
+        <h1 class="checkouttitle">4. BETALING</h1>
+        <form class="checkoutcontainer">
             <span>BETAL MED KORT</span>
             Kortnummer
-            <input type="number" placeholder="342342****4435" class="searchbar">
+            <input type="number" placeholder="342342****4435" class="checksearchbar">
+            Utløpsdato
+            <input type="date" class="checksearchbar">
+            CVC/CVV
+            <input type="text" placeholder="CVC/CVV" class="checksearchbar">
         </form>
-        <form>
-            <span>Utløpsdato</span>
-            <label>
-                <input type="date" class="searchbar">
-            </label>
-        </form>
-        <form>
-            <span>CVC/CVV</span>
-            <label>
-                <input type="text" placeholder="CVC/CVV" class="searchbar">
-            </label>
-        </form>
-        <form>
+        <form class="container-column">
             <span> Å betale inkl. mva.</span>
             <span>1 199kr</span>
             <input type="submit" value="Fullfør kjøp" class="checkbtn">
-            Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger
-            <label>
+            <p id="disclaimer">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger</p>
+            <label class="container-row">
                 <input type="checkbox">
                 Ja takk! Send nyhetsbrev til meg.
+            </label>
+            <label class="container-row">
                 <input type="checkbox">
                 Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
             </label>
@@ -115,7 +109,7 @@
     </aside>
     <footer>
         <section class="footersec" id="footer">
-            <h2><a href="index.html" class="logo">Logo</a></h2>
+            <h2><a href="index.html" class="flogo">Logo</a></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </section>
         <section class="footericons">
