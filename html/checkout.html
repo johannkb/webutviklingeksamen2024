@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>checkout</title>
+    <title>Kasse</title>
     <link href="../css/style.css" rel="stylesheet" media="all">
     <script src="https://kit.fontawesome.com/d84bb0414c.js" crossorigin="anonymous"></script>
 </head>
@@ -11,21 +11,21 @@
     <header>
         <form class="container-row">
             <label>
-                <input type="text" class="searchbar" name="navn" value="søk her" alt="skriv her for å fylle søkefeltet. etter fylt klikk på søkeikonet på høyre side av søkefeltet">
+                <input type="text" class="searchbar" name="søkefelt for nettsiden" placeholder="søk her">
             </label>
-            <button class="searchbtn"><i class="fa-solid fa-magnifying-glass" alt="trykk på ikonet for å søke etter det som er skrevet inn tidligere"></i></button>
+            <button class="searchbtn" aria-label="søke knapp for søkefelt"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html" alt="trykk her for å gå til hovedsiden">Hjem</a></li>
-            <li><a href="#product" alt="trykk her for å gå til produkter lenger ned i nettsiden">Produkter</a></li>
-            <li><h1><a href="index.html" class="logo" alt="trykk på ikonet for å gå til hovedsiden">Logo</a></h1></li>
-            <li><a href="#category" alt="trykk her for å gå til kategorier lenger ned i nettsiden">Kategorier</a></li>
-            <li><a href="#footer" alt="trykk her for å gå til nederst av nettsiden for kontakt oss informasjon">Kontakt oss</a></li>
-            <li><i class="fa-regular fa-user" alt="trykk på ikonet for å gå til min-side"></i></li>
-            <li><i class="fa-regular fa-heart" alt="trykk på ikonet for å gå til likte produkter"></i></li>
-            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" alt="trykk på ikonet for å gå til handlekurv"></i></a></li>
+            <li><a href="index.html" aria-label="Lenke tilbake til forsiden">Hjem</a></li>
+            <li><a href="#product" aria-label="flytter deg til produkter delen av gjeldene side">Produkter</a></li>
+            <li><a href="index.html" class="logo" aria-label="Lenke tilbake til forsiden">Logo</a></li>
+            <li><a href="#category" aria-label="Flytter deg til kategori delen av gjeldene side">Kategorier</a></li>
+            <li><a href="#footer" aria-label="flytter deg til kontakt oss delen av gjeldene side">Kontakt oss</a></li>
+            <li><i class="fa-regular fa-user" aria-label="Lenke til min side"></i></li>
+            <li><i class="fa-regular fa-heart" aria-label="Lenke til Likte produkter"></i></li>
+            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Lenke til Handlekurv"></i></a></li>
         </ul>
     </nav>
     <main>
@@ -56,62 +56,60 @@
         <h2 class="checkouttitle">2. DINE OPPLYSNINGER</h2>
         <form class="checkoutcontainer">
             <p>leveringsadresse</p>
-                <input type="text" placeholder="Fornavn*" class="checksearchbar" alt="felt for å legge inn fornavn">
-                <input type="text" placeholder="Etternavn*" class="checksearchbar" alt="felt for å legge inn etternavn">
-                <input type="text" placeholder="Gateadresse*" class="checksearchbar" alt="felt for å legge inn gateadresse">
-                <input type="number" placeholder="Postnummer*" class="checksearchbar" alt="felt for å legge inn postnummer">
-                <input type="text" placeholder="Poststed" class="checksearchbar" alt="felt for å legge inn poststed">
+                <input type="text" placeholder="Fornavn*" autocomplete="given-name" class="checksearchbar" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                <input type="text" placeholder="Etternavn*" autocomplete="additional-name" class="checksearchbar" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                <input type="text" placeholder="Gateadresse*" autocomplete="address-line1" class="checksearchbar" required>
+                <input type="number" placeholder="Postnummer*" autocomplete="off" class="checksearchbar" required>
+                <input type="text" placeholder="Poststed*" autocomplete="address-level1" class="checksearchbar" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
         </form>
-        <input type="submit" value="Lagre" class="checkbtn" alt="lagre knapp for å lagre tidligere skrevet informasjon">
-            <a href="#">avbryt</a>
+        <input type="submit" value="Lagre" class="checkbtn" name="Lagrer informasjon skrevet i dine opplysninger">
+            <a href="checkout.html" aria-label="fjerner skrevet informasjon og laster siden på nytt">avbryt</a>
         <h2 class="checkouttitle">3. LEVERING</h2>
         <form class="checkoutcontainer">
             <span>LEVERINGSVALG</span>
-            <label class="checkradio">
-                <input type="radio" name="levering">
+            <label class="checkradio" aria-label="Valg for Express levering hjem">
+                <input type="radio" name="leverings valg" required>
                 Express Hjemlevering
             </label>
-            <label class="checkradio">
-                <input type="radio" name="levering">
+            <label class="checkradio" aria-label="Valg for Express levering til nærmeste Utleveringssted">
+                <input type="radio" name="leverings valg" required>
                 Express Pakke til Utleveringssted
             </label>
-            <label class="checkradio">
-                <input type="radio" name="levering">
+            <label class="checkradio" aria-label="Valg for Standard Hjemlevering">
+                <input type="radio" name="leverings valg" required>
                 Standard Hjemlevering
             </label>
         </form>
         <h2 class="checkouttitle">4. BETALING</h2>
         <form class="checkoutcontainer">
             <span>BETAL MED KORT</span>
-            Kortnummer
-            <input type="number" placeholder="342342****4435" class="checksearchbar" alt="felt for å legge inn Kortnummer">
-            Utløpsdato
-            <input type="date" class="checksearchbar" alt="felt for å legge inn Utløpsdato">
-            CVC/CVV
-            <input type="text" placeholder="CVC/CVV" class="checksearchbar" alt="felt for å legge inn CVC/CVV">
-        </form>
-        <form class="container-column">
+            Kortnummer*
+            <input type="text" aria-label="Felt for kredittkortnummer som er 16 nummere" autocomplete="cc-number" placeholder="3423 42** **** 4435" class="checksearchbar" maxlength="16" required>
+            Utløpsdato*
+            <input type="month" aria-label="Felt for Utløpsdato av kredittkort i format utløpsmåned og utløpsår eksempel januar i 2026" autocomplete="cc-exp" class="checksearchbar" placeholder="mm/yy" max="2024-11" required>
+            CVC/CVV*
+            <input type="text" aria-label="Felt for CVC/CVV som er ofte 3 sifre bak på kredittkortet" autocomplete="cc-csc" placeholder="CVC/CVV" class="checksearchbar" pattern="{3}" required>
             <p> Å betale inkl. mva.</p>
             <p>1 199kr</p>
-            <input type="submit" value="Fullfør kjøp" class="checkbtn" alt="fullfør kjøp knapp som vil ta deg videre til ordre oversikt">
+            <input type="submit" value="Fullfør kjøp" class="checkbtn" name="knapp for å bli videresendt til bekreftelse før endelig kjøp">
             <p id="disclaimer">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger</p>
             <label class="container-row">
-                <input type="checkbox">
-                Ja, jeg godtar vilkårene.
+                <input type="checkbox" name="godta vilkår" required>
+                Ja, jeg godtar vilkårene.*
             </label>
             <label class="container-row">
-                <input type="checkbox">
+                <input type="checkbox" name="få nyhetsbrev på epost">
                 Ja takk! Send nyhetsbrev til meg.
             </label>
             <label class="container-row">
-                <input type="checkbox">
+                <input type="checkbox" name="få nyheter med sms">
                 Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
             </label>
         </form>
     </aside>
     <footer>
         <section class="footersec" id="footer">
-            <h2><a href="index.html" class="flogo" alt="trykk her for å gå til hovedsiden">Logo</a></h2>
+            <h2><a href="index.html" class="flogo" aria-label="Lenke tilbake til forsiden">Logo</a></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </section>
         <section class="footericons">
@@ -126,19 +124,20 @@
         <section class="shortcut">
             <h2>Snarveier</h2>
             <ul>
-                <li><a href="#product">Produkter</a></li>
-                <li><a href="#category">Kategorier</a></li>
-                <li><a href="#footer">Kontakt oss</a></li>
+                <li><a href="#product" aria-label="Flytter deg til produkter delen av gjeldene side">Produkter</a></li>
+                <li><a href="#category" aria-label="Flytter deg til kategori delen av gjeldene side">Kategorier</a></li>
+                <li><a href="#footer" aria-label="flytter deg til kontakt oss delen av gjeldene side">Kontakt oss</a></li>
+                <li><a href="../documents/availability.pdf" target="_blank" aria-label="lenke til tilgjengelighets dokumentet">Tilgjengelighets dokument</a></li>
             </ul>
         </section>
         <section class="social">
             <h2>sosiale medier</h2>
-                <ul>
-                    <li><a href="instagram.com"><i class="fa-brands fa-instagram" alt="trykk på ikonet for å gå til instagram.com"></i></a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook" alt="trykk på ikonet for å gå til facebook.com"></i></a></li>
-                    <li><a href="linkedin.com"><i class="fa-brands fa-linkedin" alt="trykk på ikonet for å gå til linkedin.com"></i></a></li>
-                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest" alt="trykk på ikonet for å gå til pinterest.com"></i></a></li>
-                </ul>
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank" aria-label="Lenke til instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" aria-label="Lenke til facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank" aria-label="Lenke til linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.pinterest.com" target="_blank" aria-label="Lenke til pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
         </section>
     </footer>
 </body>

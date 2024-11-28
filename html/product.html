@@ -9,33 +9,33 @@
 </head>
 <body>
     <header>
-        <form action="#" target="_blank" class="container-row">
+        <form class="container-row">
             <label>
-                <input type="text" class="searchbar" name="navn" value="søk her" alt="skriv her for å fylle søkefeltet. etter fylt klikk på søkeikonet på høyre side av søkefeltet">
+                <input type="text" class="searchbar" name="søkefelt for nettsiden" placeholder="søk her">
             </label>
-            <button class="searchbtn"><i class="fa-solid fa-magnifying-glass" alt="trykk på ikonet for å søke etter det som er skrevet inn tidligere"></i></button>
+            <button class="searchbtn" aria-label="søke knapp for søkefelt"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html" alt="trykk her for å gå til hovedsiden">Hjem</a></li>
-            <li><a href="#product" alt="trykk her for å gå til produkter lenger ned i nettsiden">Produkter</a></li>
-            <li><h1><a href="index.html" class="logo" alt="trykk på ikonet for å gå til hovedsiden">Logo</a></h1></li>
-            <li><a href="#category" alt="trykk her for å gå til kategorier lenger ned i nettsiden">Kategorier</a></li>
-            <li><a href="#footer" alt="trykk her for å gå til nederst av nettsiden for kontakt oss informasjon">Kontakt oss</a></li>
-            <li><i class="fa-regular fa-user" alt="trykk på ikonet for å gå til min-side"></i></li>
-            <li><i class="fa-regular fa-heart" alt="trykk på ikonet for å gå til likte produkter"></i></li>
-            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" alt="trykk på ikonet for å gå til handlekurv"></i></a></li>
+            <li><a href="index.html" aria-label="Lenke tilbake til forsiden">Hjem</a></li>
+            <li><a href="#product" aria-label="flytter deg til produkter delen av gjeldene side">Produkter</a></li>
+            <li><a href="index.html" class="logo" aria-label="Lenke tilbake til forsiden">Logo</a></li>
+            <li><a href="#category" aria-label="Flytter deg til kategori delen av gjeldene side">Kategorier</a></li>
+            <li><a href="#footer" aria-label="flytter deg til kontakt oss delen av gjeldene side">Kontakt oss</a></li>
+            <li><i class="fa-regular fa-user" aria-label="Lenke til min side"></i></li>
+            <li><i class="fa-regular fa-heart" aria-label="Lenke til Likte produkter"></i></li>
+            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" aria-label="Lenke til Handlekurv"></i></a></li>
         </ul>
     </nav>
     <main>
         <div id="breadcrumb">
             <ul>
-                <li><a href="index.html" alt="trykk her for å gå til hovedsiden">Hjem</a></li>
+                <li><a href="index.html" aria-label="Lenke tilbake til forsiden">Hjem</a></li>
                 <li>></li>
-                <li><a href="#producttext" alt="trykk her for å gå til kategorier i samme nettside">Kategori</a></li>
+                <li><a href="#producttext" aria-label="Flytter deg til kategori delen av gjeldene side">Kategori</a></li>
                 <li>></li>
-                <li class="boldtext"><a href="#product" alt="trykk her for å gå til produkter i samme nettside">Produktnavn</a></li>
+                <li class="boldtext"><a href="#product" aria-label="flytter deg til produkter delen av gjeldene side">Produktnavn</a></li>
             </ul>
         </div>
         <div id="productside">
@@ -86,7 +86,7 @@
     </aside>
     <footer>
         <section class="footersec" id="footer">
-            <h2><a href="index.html" class="flogo" alt="trykk her for å gå til hovedsiden">Logo</a></h2>
+            <h2><a href="index.html" class="flogo" aria-label="Lenke tilbake til forsiden">Logo</a></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </section>
         <section class="footericons">
@@ -101,19 +101,20 @@
         <section class="shortcut">
             <h2>Snarveier</h2>
             <ul>
-                <li><a href="#product">Produkter</a></li>
-                <li><a href="#category">Kategorier</a></li>
-                <li><a href="#footer">Kontakt oss</a></li>
+                <li><a href="#product" aria-label="Flytter deg til produkter delen av gjeldene side">Produkter</a></li>
+                <li><a href="#category" aria-label="Flytter deg til kategori delen av gjeldene side">Kategorier</a></li>
+                <li><a href="#footer" aria-label="flytter deg til kontakt oss delen av gjeldene side">Kontakt oss</a></li>
+                <li><a href="../documents/availability.pdf" target="_blank" aria-label="lenke til tilgjengelighets dokumentet">Tilgjengelighets dokument</a></li>
             </ul>
         </section>
         <section class="social">
             <h2>sosiale medier</h2>
-                <ul>
-                    <li><a href="instagram.com"><i class="fa-brands fa-instagram" alt="trykk på ikonet for å gå til instagram.com"></i></a></li>
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook" alt="trykk på ikonet for å gå til facebook.com"></i></a></li>
-                    <li><a href="linkedin.com"><i class="fa-brands fa-linkedin" alt="trykk på ikonet for å gå til linkedin.com"></i></a></li>
-                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest" alt="trykk på ikonet for å gå til pinterest.com"></i></a></li>
-                </ul>
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank" aria-label="Lenke til instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" aria-label="Lenke til facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank" aria-label="Lenke til linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.pinterest.com" target="_blank" aria-label="Lenke til pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
         </section>
     </footer>
 </body>
