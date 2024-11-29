@@ -23,6 +23,7 @@ body{
     text-decoration: none;
     display: flex;
     justify-content: center;
+    align-self: center;
     flex-direction: column;
     font-family:"Montserrat", sans-serif;
     line-height: 1.6;
@@ -56,7 +57,7 @@ i:hover{
     color: darkgray;
 }
 
-.container-row{
+.searchbarnav{
     display: flex;
     flex-direction: row;
     font-size: 0.875rem;
@@ -83,6 +84,12 @@ a:hover{
 
 .searchbtn i{
     font-size: 0.875rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 nav ul{
@@ -148,9 +155,9 @@ nav ul li{
     margin-right: 1rem;
 }
 
-#product{
-    display: flex;
-    flex-direction: column;
+.productwrapper{
+    list-style-type: none;
+    padding: 0;
 }
 
 .productitems a{
@@ -185,11 +192,15 @@ nav ul li{
     padding: 0;
 }
 
+#productbtn h3{
+    font-weight: normal;
+}
+
 #productbtn ul li{
     border: 1px solid rgb(175, 175, 175);
     padding: 0.5rem 1rem;
     margin: 0; 
-    width: 100%;
+    width: fit-content;
 }
 
 #productbtn ul{
@@ -208,14 +219,106 @@ nav ul li{
     text-transform: capitalize;
 }
 
-#category article{
+.catwrapper article{
     display: flex;
-    border: 1px solid black;
     height: 300px;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
+}
+
+#category{
+    width: 100%;
+    height: 100%;
+}
+
+.catwrapper{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catwrapper h3{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cat1{
+    position: relative;
+    text-align: center;
+    color: white;
+    min-height: 300px;
+}
+
+#cat1 img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+
+#cat2{
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    min-height: 300px;
+}
+
+#cat2 img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+
+#cat3{
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    min-height: 300px;
+}
+
+#cat3 img{
+    min-width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+
+#cat4{
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    min-height: 300px;
+}
+
+#cat4 img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+}
+
+#cat5{
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    min-height: 300px;
+}
+
+#cat5 img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
 }
 
 .reviews article img{
@@ -235,6 +338,13 @@ nav ul li{
     border-style: solid;
     border-width: 1px;
     margin-top: 4rem;
+    width: 100%;
+}
+
+.footcontainer{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footericons{
@@ -320,21 +430,22 @@ nav ul li{
     padding:0;
 }
 
-#breadcrumb ul{
+#breadcrumb{
     display: flex;
     flex-direction: row;
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 1rem 0;
+    width: 100%;
 }
 
-#breadcrumb ul li a{
+#breadcrumb li a{
     font-size: 0.875rem;
     text-decoration: none;
     color: black;
 }
 
-#breadcrumb ul li{
+#breadcrumb li{
     margin:0;
     padding: 0 1rem 0 0;
     font-size: 1.125rem;
@@ -342,8 +453,8 @@ nav ul li{
     color: black;
 }
 
-#productside ul{
-    list-style: none;
+#productside{
+    list-style-type: none;
     margin: 0;
     padding: 0;    
 }
@@ -351,11 +462,6 @@ nav ul li{
 #productside img{
     height: 100%;
     width: 100%;
-}
-
-.photosize{
-    max-width: 300px;
-    max-height: 300px;
 }
 
 #producttext ul li{
@@ -372,6 +478,10 @@ nav ul li{
     text-transform: uppercase;
     font-size: 1.125rem;
     font-weight:300;
+}
+
+.productaside h2{
+    width: 100%;
 }
 
 .productaside article h3{
@@ -467,4 +577,176 @@ nav ul li{
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+
+@media (min-width: 1000px){
+    body{
+        padding: 0 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .navicon{
+        justify-content: end;
+        width: auto;
+    }
+
+    nav{
+        flex-direction: row;
+        justify-content: right;
+        
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row; 
+        width: 75%;
+        height: auto;
+        justify-content: center;
+    }
+
+    nav ul li{
+        padding: 1rem;
+        align-self: center;
+        justify-content: center;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    .container-row{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footcontainer h2{
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
+    .footcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productwrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .productitems{
+        max-width: 350px;
+        margin: 0 1rem;
+        width: 100%;
+    }
+
+    #category{
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        width:100%;
+        max-width: 1200px;
+    }
+
+    .catwrapper article{
+        margin: 0;
+    }
+
+    .catwrapper{
+        margin: 0;
+        display: grid;
+        grid-template-areas: "cat1 cat1 cat1 cat1 cat2 cat2 cat2 cat2 cat3 cat3 cat3 cat3"
+                             "cat4 cat4 cat4 cat4 cat4 cat4 cat4 cat4 cat4 cat5 cat5 cat5";
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        gap: 2px;
+    }
+
+    #cat1{
+        grid-area: cat1;
+        max-width: 386px;
+    }
+    #cat2{
+        grid-area: cat2;
+        max-width: 386px;
+        justify-self: center;
+    }
+    #cat3{
+        grid-area: cat3;
+        max-width: 386px;
+        justify-self: end;
+    }
+    #cat4{
+        grid-area: cat4;
+        max-width: 864px;
+    }
+    #cat5{
+        grid-area: cat5;
+        max-width: 300px;
+        justify-self: start;
+    }
+    
+    .reviews ul{
+        margin: 1rem;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    .reviews h2{
+        width: 100%;
+    }
+
+    .reviews article{
+        max-width: 289px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #productside{
+        display: flex;
+        max-width: 700px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .photosize{
+        max-width: 160px;
+        padding: 1rem 0;
+    }
+
+    #product{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
