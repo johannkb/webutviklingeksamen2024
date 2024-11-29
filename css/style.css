@@ -42,6 +42,9 @@ h2{
     text-transform: capitalize;
 }
 
+h4{
+    font-size: 1.25rem;
+}
 i{
     color: black;
     font-size: 1.25rem;
@@ -153,6 +156,11 @@ nav ul li{
     padding: 1rem;
     max-width: fit-content;
     margin-right: 1rem;
+}
+
+#product{
+    display: flex;
+    flex-direction: column;
 }
 
 .productwrapper{
@@ -321,6 +329,10 @@ nav ul li{
     object-fit: cover;
 }
 
+.reviews ul{
+    list-style-type: none;
+}
+
 .reviews article img{
     height: 100px;
     width: 100px;
@@ -342,7 +354,6 @@ nav ul li{
 }
 
 .footcontainer{
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -482,6 +493,7 @@ nav ul li{
 
 .productaside h2{
     width: 100%;
+    margin: 0;
 }
 
 .productaside article h3{
@@ -490,10 +502,6 @@ nav ul li{
     justify-content: space-between;
     text-transform: capitalize;
     font-size: 	1.375rem;
-}
-
-.productaside{
-    padding: 1rem;
 }
 
 .productaside img{
@@ -507,14 +515,57 @@ nav ul li{
     align-self: center;
 }
 
+.shopitems{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    margin: 0;
+    max-height: 600px;
+}
+
+.shopitems a{
+    color: black;
+    text-decoration: none;
+}
+
+.shopitems img{
+    width: 100%;
+    height: 70%;
+}
+
+.shopitems p{
+    margin: 0;
+}
+
+.shopitems h2{
+    font-size: 1.125rem;
+    text-transform: capitalize;
+}
+
+.shopitems h4{
+    margin: 0;
+    padding: 0;
+}
+
+.prodname{
+    width: 100%;
+}
+
 .checkoutcontainer{
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    border: 1px solid lightgray;
+    padding: 2rem 2rem;
 }
 
-.checkoutcontainer legend{
-    padding: 2rem 0 0 0;
+.checkoutcontainer h2{
+    margin: 0;
+}
+
+.checkoutcontainer p{
+    margin: .5rem 0;
 }
 
 .checkoutcontainer span{
@@ -527,6 +578,22 @@ nav ul li{
     text-transform: capitalize;
     font-size: 1.125rem;
     padding:0 0 2rem 0;
+    color: blue;
+}
+
+.checkradio{
+    border: 1px solid lightgray;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: .5rem 0;
+}
+
+.checkradio small{
+    display: inline-block;
+    width: 100%;
+    font-weight: lighter;
+    padding: 0 1rem;
 }
 
 .checksearchbar{
@@ -535,6 +602,8 @@ nav ul li{
     padding: 1rem;
     margin: 0 0 .4rem 0;
     color: #747474;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .checkbtn{
@@ -544,7 +613,7 @@ nav ul li{
     background-color: #434343;
     color: #fff;
     padding: 1rem;
-    margin: 0 0 1rem 0;
+    margin:1rem 0;
     width: fit-content;
     text-decoration: none;
     justify-content: center;
@@ -556,14 +625,10 @@ nav ul li{
 }
 
 .checkouttitle{
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     padding:0;
     margin: 2rem 0 1rem 0 ;
-}
-
-.checkradio{
-    font-weight: bold;
-    margin: 1.3rem 0;
+    box-sizing: border-box;
 }
 
 .flogo{
@@ -577,6 +642,10 @@ nav ul li{
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+.container-row{
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width: 1000px){
@@ -597,7 +666,7 @@ nav ul li{
     nav{
         flex-direction: row;
         justify-content: right;
-        
+        width: 100%;
     }
 
     nav ul{
@@ -653,12 +722,11 @@ nav ul li{
     .productwrapper{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     
     .productitems{
         max-width: 350px;
-        margin: 0 1rem;
         width: 100%;
     }
 
@@ -736,6 +804,7 @@ nav ul li{
     #productside{
         display: flex;
         max-width: 700px;
+        height: fit-content;
         flex-wrap: wrap;
         justify-content: space-between;
     }
@@ -749,4 +818,119 @@ nav ul li{
         display: flex;
         flex-wrap: wrap;
     }
+
+    .productaside{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 4rem;
+    }
+
+    .shopitems {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .shopitems img{
+        width: 20%;
+    }
+    
+    .prodname{
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+        width: 400px;
+        justify-content: center;
+    }
+
+    .infogrid{
+        display: grid;
+        grid-template-areas: "fnavn enavn"
+                             "gate gate"
+                             "postcode city";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        box-sizing: border-box;
+        gap: 5px;
+    }
+    
+    #fname{
+        grid-area: fnavn;       
+    }
+    
+    #lname{
+        grid-area: enavn;        
+    }
+    
+    #gridstreet{
+        grid-area: gate;
+    }
+
+    #postnr{
+        grid-area: postcode;
+    }
+
+    #postplace{
+        grid-area: city;
+    }
+
+    .checkbtn{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .checkoutcontainer a{
+        display: flex;
+        align-self: center;
+    }
+
+    #paytext{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0 0 0;
+    }
+
+    #paysum{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.625rem;
+        margin: .5rem;
+        font-weight: bold;
+    }
+
+    .cardgrid {
+        display: grid;
+        grid-template-areas: "ccnr ccnr"
+                             "cexp ccvc";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        box-sizing: border-box;
+        gap: 5px;
+      }
+      
+      #ccgrid {
+        grid-area: ccnr;
+      }
+      
+      #expgrid {
+        grid-area: cexp;
+      }
+      
+      #cvcgrid {
+        grid-area: ccvc;
+      }
+
+      .check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #disclaimer{
+        text-align: center;
+      }
 }
